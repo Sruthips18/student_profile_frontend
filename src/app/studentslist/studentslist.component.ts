@@ -8,7 +8,7 @@ import {FormGroup,FormControl,Validators} from '@angular/forms'
   styleUrls: ['./studentslist.component.css']
 })
 export class StudentslistComponent implements OnInit {
- 
+    
   constructor(private service:StudentService){}
   studentForm = new FormGroup({
    "name" : new FormControl("",Validators.required),
@@ -22,9 +22,9 @@ export class StudentslistComponent implements OnInit {
    "parent_num" : new FormControl("",Validators.required),
    "guard_relation" : new FormControl("",Validators.required)
   })
-
-  ngOnInit(): void {
-    this.service.getStudentProfileList().subscribe(data=>console.log(data))
+  
+    ngOnInit(): void {
+    console.log("ngOnInit start")
+    this.service.getStudentProfiledetails(1).subscribe(data=>this.studentForm.patchValue(data))
   }
-
 }
