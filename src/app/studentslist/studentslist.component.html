@@ -2,7 +2,7 @@
 <div class="container">
     <form action="" [formGroup]="studentForm" class="border border-3 p-4 shadow">
         <div class="mb-3">
-            <button type="submit" class="btn btn-success">Edit</button>
+            <button type="button" (click)="editClick()" class="btn btn-success">Edit</button>
         </div>
         <div class="mb-3">
             <label for="">Enter Student Name </label>

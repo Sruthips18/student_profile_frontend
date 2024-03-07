@@ -10,6 +10,7 @@ import {FormGroup,FormControl,Validators} from '@angular/forms'
 export class StudentslistComponent implements OnInit {
     
   constructor(private service:StudentService){}
+  
   studentForm = new FormGroup({
    "name" : new FormControl("",Validators.required),
    "place" : new FormControl("",Validators.required),
@@ -22,9 +23,13 @@ export class StudentslistComponent implements OnInit {
    "parent_num" : new FormControl("",Validators.required),
    "guard_relation" : new FormControl("",Validators.required)
   })
-  
+
+  editClick(){
+    this.studentForm.enable()
+  }
     ngOnInit(): void {
     console.log("ngOnInit start")
     this.service.getStudentProfiledetails(1).subscribe(data=>this.studentForm.patchValue(data))
+    this.studentForm.disable()
   }
 }
