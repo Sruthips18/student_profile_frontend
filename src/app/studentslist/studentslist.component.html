@@ -2,6 +2,9 @@
 <div class="container">
     <form action="" [formGroup]="studentForm" class="border border-3 p-4 shadow">
         <div class="mb-3">
+            <button type="submit" class="btn btn-success">Edit</button>
+        </div>
+        <div class="mb-3">
             <label for="">Enter Student Name </label>
             <input type="text" class="form-control" placeholder="student name" formControlName="name">
         </div>
@@ -52,6 +55,10 @@
         <div class="mb-3">
             <label for="">Enter Guardian Relationship</label>
             <input type="text" class="form-control" placeholder="Relationship" formControlName="guard_relation">
+        </div>
+        <div class="mb-3 d-flex gap-3">
+            <button type="submit" class="btn btn-success">Save</button>
+            <button type="submit" class="btn btn-danger">Clear</button>
         </div>
     </form>
 </div>
