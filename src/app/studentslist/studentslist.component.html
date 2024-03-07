@@ -1,0 +1,57 @@
+<p>studentslist works!</p>
+<div class="container">
+    <form action="" [formGroup]="studentForm" class="border border-3 p-4 shadow">
+        <div class="mb-3">
+            <label for="">Enter Student Name </label>
+            <input type="text" class="form-control" placeholder="student name" formControlName="name">
+        </div>
+        <div class="mb-3">
+            <label for="">Enter Place </label>
+            <input type="text" class="form-control" placeholder="place" formControlName="place">
+        </div>
+        <div class="mb-3">
+            <label for="">Enter Roll Number</label>
+            <input type="text" class="form-control" placeholder="Roll Number" formControlName="rollno">
+        </div>
+        <div class="mb-3">
+            <label for=""> Enter the Course </label>
+            <input type="text" class="form-control" placeholder="Course" formControlName="course">
+        </div>
+        <div class="mb-3">
+            <label for="">Enter Mobile Number</label>
+            <input type="text" class="form-control" placeholder="Mobile Number" formControlName="mobile">
+
+        </div>
+        <div class="mb-3">
+            <label for="">Enter the Email</label>
+            <input type="text" class="form-control" placeholder="Email" formControlName="email">
+        </div>
+
+        <div class="mb-3">
+            <label for="">Select Gender</label>
+            <div class="mb-3 d-flex gap-3">
+                <input type="radio" id="Male" value="Male" formControlName="gender">
+                <label for="Male">Male</label>
+        
+                <input type="radio" id="Female" value="Female" formControlName="gender">
+                <label for="Female">Female</label>
+            
+                <input type="radio" id="Others" value="Others" formControlName="gender">
+                <label for="Others">Others</label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="">Enter the Guardian Name</label>
+            <input type="text" class="form-control" placeholder="Guardian Name" formControlName="parent_name"> 
+        </div>
+        <div class="mb-3">
+            <label for="">Enter the Guardian Phone Number</label>
+            <input type="text" class="form-control" placeholder="Mobile" formControlName="parent_num">
+        </div>
+        <div class="mb-3">
+            <label for="">Enter Guardian Relationship</label>
+            <input type="text" class="form-control" placeholder="Relationship" formControlName="guard_relation">
+        </div>
+    </form>
+</div>
