@@ -1,6 +1,6 @@
 <p>studentslist works!</p>
 <div class="container">
-    <form action="" [formGroup]="studentForm" class="border border-3 p-4 shadow">
+    <form action="" [formGroup]="studentForm" (ngSubmit)=" saveStudentDetails()" class="border border-3 p-4 shadow">
         <div class="mb-3">
             <button type="button" (click)="editClick()" class="btn btn-success">Edit</button>
         </div>
@@ -59,7 +59,7 @@
         </div>
         <div class="mb-3 d-flex gap-3">
             <button type="submit" class="btn btn-success" [disabled]="!studentForm.valid">Save</button>
-            <button type="button"  class="btn btn-danger">Clear</button>
+            <button type="button" (click)="clearForm()" class="btn btn-danger">Clear</button>
         </div>
     </form>
 </div>

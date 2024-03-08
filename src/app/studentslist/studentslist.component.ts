@@ -28,7 +28,17 @@ export class StudentslistComponent implements OnInit {
   editClick(){
     this.studentForm.enable()
   }
- 
+  clearForm(){
+    this.studentForm.reset()
+  }
+  saveStudentDetails(){
+    let data = this.studentForm.value
+    if(this.studentForm.valid){
+      this.service.updateStudentDetails(1,data).subscribe(data=>console.log(data))
+      alert("successfully updated")
+      this.studentForm.disable()
+    }
+  }
     ngOnInit(): void {
     console.log("ngOnInit start")
     this.service.getStudentProfiledetails(1).subscribe(data=>this.studentForm.patchValue(data))

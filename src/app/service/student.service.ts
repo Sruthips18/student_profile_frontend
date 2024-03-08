@@ -12,4 +12,9 @@ export class StudentService {
   getStudentProfiledetails(id:number){
     return this.http.get(`${this.baseUrl}${id}/`)
   }
+
+  updateStudentDetails(id:any,data:any){
+    return this.http.put(`${this.baseUrl}${id}/`,data)
+  }
+ 
 }
