@@ -33,8 +33,8 @@ export class StudentslistComponent implements OnInit {
 
   saveStudentDetails(){ 
     if(this.studentForm.valid){
-      console.log(this.studentForm.value)
       alert("successfully updated")
+      console.log(this.studentForm.value)
       this.studentForm.disable()
     }
   }
