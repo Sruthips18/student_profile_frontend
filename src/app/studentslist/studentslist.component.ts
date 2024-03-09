@@ -23,6 +23,46 @@ export class StudentslistComponent implements OnInit {
    "guard_relation" : new FormControl("",Validators.required)
   })
 
+  get name(){
+    return this.studentForm.get('name')
+  }
+
+  get place(){
+    return this.studentForm.get('place')
+  }
+
+  get rollno(){
+    return this.studentForm.get('rollno')
+  }
+
+  get course(){
+    return this.studentForm.get('course')
+  }
+
+  get mobile(){
+    return this.studentForm.get('mobile')
+  }
+
+  get email(){
+    return this.studentForm.get('email')
+  }
+
+  get gender(){
+    return this.studentForm.get('gender')
+  }
+
+  get parent_name(){
+    return this.studentForm.get('parent_name')
+  }
+
+  get parent_num(){
+    return this.studentForm.get('parent_num')
+  }
+
+  get guard_relation(){
+    return this.studentForm.get('guard_relation')
+  }
+
   editClick(){
     this.studentForm.enable()
   }

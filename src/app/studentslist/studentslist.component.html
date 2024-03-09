@@ -6,28 +6,34 @@
         <div class="mb-3">
             <label for="">Enter Student Name </label>
             <input type="text" class="form-control" placeholder="student name" formControlName="name">
+            <span  class="form-text text-danger" *ngIf="name?.touched&&name?.invalid">Enter Name</span>
         </div>
         
         <div class="mb-3">
             <label for="">Enter Place </label>
             <input type="text" class="form-control" placeholder="place" formControlName="place">
+            <span  class="form-text text-danger" *ngIf="place?.touched&&place?.invalid">Enter place</span>
         </div>
         <div class="mb-3">
             <label for="">Enter Roll Number</label>
             <input type="text" class="form-control" placeholder="Roll Number" formControlName="rollno">
+            <span  class="form-text text-danger" *ngIf="rollno?.touched&&rollno?.invalid">Enter Rollno</span>
         </div>
         <div class="mb-3">
             <label for=""> Enter the Course </label>
             <input type="text" class="form-control" placeholder="Course" formControlName="course">
+            <span  class="form-text text-danger" *ngIf="course?.touched&&course?.invalid">Enter course</span>
         </div>
         <div class="mb-3">
             <label for="">Enter Mobile Number</label>
             <input type="text" class="form-control" placeholder="Mobile Number" formControlName="mobile">
+            <span  class="form-text text-danger" *ngIf="mobile?.touched&&mobile?.invalid">Enter Valid mobile number</span>
 
         </div>
         <div class="mb-3">
             <label for="">Enter the Email</label>
             <input type="text" class="form-control" placeholder="Email" formControlName="email">
+            <span  class="form-text text-danger" *ngIf="email?.touched&&email?.invalid">Enter Valid Email</span>
         </div>
 
         <div class="mb-3">
@@ -47,14 +53,17 @@
         <div class="mb-3">
             <label for="">Enter the Guardian Name</label>
             <input type="text" class="form-control" placeholder="Guardian Name" formControlName="parent_name"> 
+            <span  class="form-text text-danger" *ngIf="parent_name?.touched&&parent_name?.invalid">Enter Name</span>
         </div>
         <div class="mb-3">
             <label for="">Enter the Guardian Phone Number</label>
             <input type="text" class="form-control" placeholder="Mobile" formControlName="parent_num">
+            <span  class="form-text text-danger" *ngIf="parent_num?.touched&&parent_num?.invalid">Enter Valid Mobile Number</span>
         </div>
         <div class="mb-3">
             <label for="">Enter Guardian Relationship</label>
             <input type="text" class="form-control" placeholder="Relationship" formControlName="guard_relation">
+            <span  class="form-text text-danger" *ngIf="guard_relation?.touched&&guard_relation?.invalid">Enter Relationship</span>
         </div>
         <div class="mb-3 d-flex gap-3">
             <button type="submit" class="btn btn-success" [disabled]="!studentForm.valid">Save</button>
