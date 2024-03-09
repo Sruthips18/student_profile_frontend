@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StudentslistComponent } from './studentslist/studentslist.component';
 
-import { HttpClientModule } from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms'
 
 @NgModule({
@@ -16,7 +15,6 @@ import {ReactiveFormsModule} from '@angular/forms'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     ReactiveFormsModule
   ],
   providers: [],
